@@ -25,9 +25,6 @@ const typeController = (e) => {
 
 	// Handle backspace press
 	if (newLetter == 'Backspace') {
-		if (errorCount !== 0) {
-			errorCount--;
-		}
 		userText = userText.slice(0, userText.length - 1);
 		return display.removeChild(display.lastChild);
 	}
@@ -54,8 +51,6 @@ const typeController = (e) => {
 
 	// check if given question text is equal to user typed text
 	if (questionText === userText) {
-		gameOver();
-	} else if (questionText.length === userText.length) {
 		gameOver();
 	}
 };
