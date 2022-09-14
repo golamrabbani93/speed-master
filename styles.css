@@ -194,6 +194,6 @@ button {
 	}
 
 	.card {
-		flex-direction: column;
+		text-align: center;
 	}
 }
