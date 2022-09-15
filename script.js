@@ -86,6 +86,7 @@ const gameOver = (text) => {
 	resultModal.innerHTML += `
     <h1>Finished!</h1>
     <p>You took: <span class="bold">${timeTaken}</span> seconds</p>
+    <p>Word Per Minute <span class="bold green">${wpm}</span></p>
     <p>You made <span class="bold red">${errorCount}</span> mistakes</p>
     <button onclick="closeModal()">Close</button>
   `;
