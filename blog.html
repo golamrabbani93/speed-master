@@ -11,5 +11,59 @@
 			rel="stylesheet"
 		/>
 	</head>
-	<body></body>
+	<body>
+		<section>
+			<div class="container pt-5 mt-5">
+				<h1 class="text-center">Questions</h1>
+				<div class="row">
+					<div class="accordion" id="accordionExample">
+						<div class="accordion-item">
+							<h2 class="accordion-header" id="headingOne">
+								<button
+									class="accordion-button"
+									type="button"
+									data-bs-toggle="collapse"
+									data-bs-target="#collapseOne"
+									aria-expanded="true"
+									aria-controls="collapseOne"
+								>
+									<span class="fw-bolder"> LocalStorage vs. SessionStorage</span>
+								</button>
+							</h2>
+							<div
+								id="collapseOne"
+								class="accordion-collapse collapse show"
+								aria-labelledby="headingOne"
+								data-bs-parent="#accordionExample"
+							>
+								<div class="accordion-body">
+									<p>
+										<strong>Local storage :</strong> Local storage is available in the browser to
+										all windows with the same origin (domain). Data stored in the local storage is
+										also available after the window has been closed. The next time a window is
+										opened and loads the page from the same origin, the page can access the stored
+										values there again.
+									</p>
+									<p>
+										<strong>Session storage :</strong> Session storage is available inside the same
+										browser window for as long as the window is open. When the browser window is
+										closed, the session storage associated with that window is deleted. Multiple
+										windows from the same origin (URL) cannot see each others session storage. Popup
+										windows opened from the same window can see session storage, and so can iframes
+										inside the same window.
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- *bootstrap Script CDN -->
+		<script
+			src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
+			integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
+			crossorigin="anonymous"
+		></script>
+	</body>
 </html>
