@@ -72,7 +72,7 @@ const gameOver = (text) => {
 	// *word per minute Count(optional)
 	const wpmlen = text.length;
 	const wpmCount = (wpmlen / timeTaken) * 60;
-	const wpm = parseInt(wpmCount);
+	let wpm = parseInt(wpmCount);
 	console.log('🚀 ~ file: script.js ~ line 76 ~ gameOver ~ wpm', wpm);
 	// show result modal
 	resultModal.innerHTML = '';
@@ -91,12 +91,13 @@ const gameOver = (text) => {
     <button onclick="closeModal()">Close</button>
   `;
 
-	addHistory(questionText, timeTaken, errorCount);
+	addHistory(questionText, timeTaken, errorCount, wpm);
 
 	// restart everything
 	startTime = null;
 	errorCount = 0;
 	userText = '';
+	wpm = 0;
 	display.classList.add('inactive');
 };
 
