@@ -51,7 +51,7 @@ const typeController = (e) => {
 
 	// check if given question text is equal to user typed text
 	if (questionText === userText) {
-		gameOver();
+		gameOver(questionText);
 	}
 };
 
@@ -63,13 +63,17 @@ const validate = (key) => {
 };
 
 // FINISHED TYPING
-const gameOver = () => {
+const gameOver = (text) => {
 	document.removeEventListener('keydown', typeController);
 	// the current time is the finish time
 	// so total time taken is current time - start time
 	const finishTime = new Date().getTime();
 	const timeTaken = Math.round((finishTime - startTime) / 1000);
-
+	// *word per minute Count(optional)
+	const wpmlen = text.length;
+	const wpmCount = (wpmlen / timeTaken) * 60;
+	const wpm = parseInt(wpmCount);
+	console.log('🚀 ~ file: script.js ~ line 76 ~ gameOver ~ wpm', wpm);
 	// show result modal
 	resultModal.innerHTML = '';
 	resultModal.classList.toggle('hidden');
