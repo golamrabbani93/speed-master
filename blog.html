@@ -91,6 +91,45 @@
 								</div>
 							</div>
 						</div>
+						<div class="accordion-item">
+							<h2 class="accordion-header" id="headingThree">
+								<button
+									class="accordion-button"
+									type="button"
+									data-bs-toggle="collapse"
+									data-bs-target="#collapseThree"
+									aria-expanded="true"
+									aria-controls="collapseThree"
+								>
+									<span class="fw-bolder">How does works Event Loop ?</span>
+								</button>
+							</h2>
+							<div
+								id="collapseThree"
+								class="accordion-collapse collapse"
+								aria-labelledby="headingThree"
+								data-bs-parent="#accordionExample"
+							>
+								<div class="accordion-body">
+									<p>
+										<strong>Event Loop :</strong> Each message is processed completely before any
+										other message is processed. This offers some nice properties when reasoning
+										about your program, including the fact that whenever a function runs, it cannot
+										be preempted and will run entirely before any other code runs (and can modify
+										data the function manipulates). This differs from C, for instance, where if a
+										function runs in a thread, it may be stopped at any point by the runtime system
+										to run some other code in another thread.
+									</p>
+									<p>
+										A downside of this model is that if a message takes too long to complete, the
+										web application is unable to process user interactions like click or scroll. The
+										browser mitigates this with the "a script is taking too long to run" dialog. A
+										good practice to follow is to make message processing short and if possible cut
+										down one message into several messages.
+									</p>
+								</div>
+							</div>
+						</div>
 					</div>
 				</div>
 			</div>
