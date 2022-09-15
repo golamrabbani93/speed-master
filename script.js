@@ -73,7 +73,6 @@ const gameOver = (text) => {
 	const wpmlen = text.length;
 	const wpmCount = (wpmlen / timeTaken) * 60;
 	let wpm = parseInt(wpmCount);
-	console.log('🚀 ~ file: script.js ~ line 76 ~ gameOver ~ wpm', wpm);
 	// show result modal
 	resultModal.innerHTML = '';
 	resultModal.classList.toggle('hidden');
